@@ -3,14 +3,7 @@ package go_koans
 func aboutAllocation() {
 	a := new(int)
 	*a = 3
-	assert(*a == __int__) // new() creates a pointer to the given type, like malloc() in C
-
-	type person struct {
-		name string
-		age  int
-	}
-	bob := new(person)
-	assert(bob.age == __int__) // it can allocate memory for custom types as well
+	assert(*a == 3) // new() creates a pointer to the given type, like malloc() in C
 
 	slice := make([]int, 3)
 	assert(len(slice) == __int__) // make() creates slices of a given length
